@@ -1,13 +1,20 @@
-# This is a basic workflow to help you get started with Actions
-
+---
 name: Testing behest
+on:
+  issue_comment:
+    types: [created]
 
-- uses: ActionsDesk/behest@v1
-  with:
-    # optional; comma-separated list of teams who can run commands
-    # If this is not set, user must be admin
-    teams: "team1,team2"
-    # token used for interacting with Issues as actions-bot
-    token: ${{ secrets.GITHUB_TOKEN }}
-    # token used for elevated operations against Org
-    admin_token: ${{ secrets.ADMIN_TOKEN }}
+jobs:
+  behest:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: ActionsDesk/behest@v1
+        with:
+          # optional; comma-separated list of teams who can run commands
+          # If this is not set, user must be admin
+          teams: "wenlock"
+          # token used for interacting with Issues as actions-bot
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # token used for elevated operations against Org
+          admin_token: ${{ secrets.ADMIN_TOKEN }}
