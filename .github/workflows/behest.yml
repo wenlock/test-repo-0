@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: wenlock/behest
+      - uses: wenlock/behest@master
         with:
           # optional; comma-separated list of teams who can run commands
           # If this is not set, user must be admin
