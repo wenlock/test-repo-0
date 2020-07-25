@@ -10,7 +10,7 @@ jobs:
     
     steps:
       - uses: actions/checkout@v1
-      - run: find . && env
+      - run: pwd && find . && env
       - uses: wenlock/behest@wenlock-add-commands
         with:
           # optional; comma-separated list of teams who can run commands
