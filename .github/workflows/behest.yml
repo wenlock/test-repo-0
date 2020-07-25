@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - uses: actions/checkout@v1
       - uses: wenlock/behest@wenlock-add-commands
         with:
           # optional; comma-separated list of teams who can run commands
