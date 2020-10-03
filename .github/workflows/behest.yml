@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - run: pwd && find . && env
-      - uses: wenlock/behest@wenlock-issuescomment
+      - uses: actionsdesk/behest@master
         with:
           # optional; comma-separated list of teams who can run commands
           # If this is not set, user must be admin
